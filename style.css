@@ -1,4 +1,88 @@
-#ent, #food, #clothing, #bills {
-    border: solid black;
+.invisible{
+    visibility: hidden;
+}
+
+.visible{
+    visibility: visible;
+}
+
+#spendArea{
+    margin-top: -222px;
+    color: white;
+}
+
+#largeNumbers{
+    font-size: 100px;
+}
+
+body {
+    background: seagreen;
+}
+
+#wrapper {
+    background-color: #0f3a53;
+    font-family: helvetica;
+    text-align: center;
+    width: 510px;
+    /* height: 560px; */
+    margin: 0 auto;
+    display: block;
+    border-radius: 10px;
+}
+
+h1 {
+    padding-top: 50px;
+    color: #5c9292;
+    font-size: 40px;
+}
+
+p {
+    color: white;
+    font-size: 15px;
+    margin: 0;
+}
+
+#submit{
+    background-color: #e76c37;
+    border: none;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+#budgetInput {
+    margin-bottom: 20px;
+}
+
+#transactionHistoryArea {
+    text-align: left;
+    background: black;
+    width: 500px;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0 auto;
+    display: block;
+    height: 170px;
+    /* margin-top: 20px; */
+    padding: 10px;
+    width: 480px;
+    border-radius: 10px;
+
+}
+
+#transactionHistoryArea p {
+    color: rgb(0, 255, 0);
+    /* margin-top: -25px; */
+}
+
+#largeNumbers {
+    color: #e89247;
+}
+
+.outputArea {
+    text-align: left;
+}
+
+b {
+    color: white;
 }
 
