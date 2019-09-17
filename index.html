@@ -13,7 +13,7 @@
         <div id="budgetEntry">
             <p>What is your budget?</p>
             <br>
-            <input type="number" name="budgetInput" id="budgetInput" placeholder="Enter value here">
+            <input type="number" name="budgetInput" id="budgetInput" value="100">
             <br>
             <button onclick="myBudget.saveBudget()" id="submit">Save Budget</button> 
         </div>
@@ -21,7 +21,11 @@
         <br>
         <br>
         <div id="spendArea" class="invisible">
-            <h2 id="budgetOutput"></h2>
+            <p id="budgetOutput"></p>
+            <p id="totalSpentOutput"></p>
+            <p id="balanceOutput"></p>
+            
+            <h4>Select Catagory</h4> <!--Allow the user to choose between four categories for each purchase-->
             <input type="radio" name="type" value="entCheckbox" id="entCheckbox"> Entertainment  
             <input type="radio" name="type" value="foodCheckbox" id="foodCheckbox"> Food
             <input type="radio" name="type" value="clothingCheckbox" id="clothingCheckbox"> Clothing
@@ -29,32 +33,35 @@
             <br> 
             <!-- How much you want to spend? -->
             <br>
-            <input type="number" name="spendInput" id="spendInput" value="0">  
+            <p>Enter Expense Here:
+            <input type="number" name="spendInput" id="spendInput" value="0"> </p> 
             <br>
             <button onclick="myBudget.spend()" id="submit">Submit</button> 
                     <!-- catagory outputs -->
             
         </div> 
-
+        
         <div id="transactionHistoryArea" class="invisible">
             <div class="outputArea">
                 <p id="entOutput">Total Spent on Entertainment: <b>$0</b></p>
+                <div class="progress" id="entProgress"></div>
             </div>
 
             <div class="outputArea">
-                <p id="foodOutput">Total Spent on Food: <b>$0</b></p>
+                <p id="foodOutput" width="10px">Total Spent on Food: <b>$0</b></p>
+                <!-- <div class="progress"></div> -->
             </div>
 
             <div class="outputArea">
                 <p id="clothingOutput">Total Spent on Clothing: <b>$0</b></p>
+                <!-- <div class="progress"></div> -->
             </div>
 
             <div class="outputArea">
                 <p id="billsOutput">Total Spent on Bills: <b>$0</b></p>
+                <!-- <div class="progress"></div> -->
             </div>    
-            <div class="outputArea">
-                <p>******************************************************</p>
-            </div>   
+   
                  
             <p id="transactionHistory"></p>
         </div>

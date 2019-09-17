@@ -12,18 +12,18 @@
 }
 
 #largeNumbers{
-    font-size: 100px;
+    font-size: 30px;
 }
 
 body {
-    background: seagreen;
+    background: #a7cecd;
 }
 
 #wrapper {
     background-color: #0f3a53;
     font-family: helvetica;
     text-align: center;
-    width: 510px;
+    width: 600px;
     /* height: 560px; */
     margin: 0 auto;
     display: block;
@@ -32,6 +32,7 @@ body {
 
 h1 {
     padding-top: 50px;
+    margin-bottom: 50px;
     color: #5c9292;
     font-size: 40px;
 }
@@ -56,12 +57,12 @@ p {
 
 #transactionHistoryArea {
     text-align: left;
-    background: black;
-    width: 500px;
-    font-family: 'Courier New', Courier, monospace;
+    background: #cccccc;
+    /* width: 500px; */
+    /* font-family: 'Courier New', Courier, monospace; */
     margin: 0 auto;
     display: block;
-    height: 170px;
+    /* height: 300px; */
     /* margin-top: 20px; */
     padding: 10px;
     width: 480px;
@@ -70,7 +71,7 @@ p {
 }
 
 #transactionHistoryArea p {
-    color: rgb(0, 255, 0);
+    color: black;
     /* margin-top: -25px; */
 }
 
@@ -78,11 +79,70 @@ p {
     color: #e89247;
 }
 
-.outputArea {
+#entOutput {
     text-align: left;
+    /* background: blue;
+    width: 80%;   */
+    margin: 10px;
+    border-radius: 10px;
+    /* padding-bottom: 20px; */
 }
+
+#foodOutput {
+    text-align: left;
+    /* background: purple;
+    width: 90%;   */
+    margin: 10px;
+    border-radius: 10px;
+}
+
+#clothingOutput {
+    text-align: left;
+    /* background: darkred; */
+    /* width: 90%;  */
+    margin: 10px;
+    border-radius: 10px;
+    /* padding-left: 20px; */
+}
+
+#billsOutput {
+    text-align: left;
+    /* background: orangered; */
+    /* width: 90%;  */
+    margin: 10px;
+    border-radius: 10px;
+} */
 
 b {
     color: white;
+}
+
+/* .progress { */
+    /*width: 30%; /* THIS IS WHAT CONTROLS THE PROGRESS BARS */
+    /* height: 10px;
+    background: #5c9292;
+    padding: 5px;
+    border-radius: 10px; */
+/* } */
+
+/* #entProgress{
+    width: 60%;
+} */
+
+#budgetEntry p{
+    color: white;
+}
+
+#spendArea h4 {
+    color: white;
+}
+
+#budgetOutput p, #balanceOutput p, #totalSpent p {
+    display: inline;
+    text-align: left;
+}
+
+#wrapper {
+    padding-bottom: 20px;
 }
 
