@@ -145,7 +145,6 @@ b {
       width: 768px;
     }
   }
-
   @media (min-width: 1024px) {
     #wrapper {
       width: 100%;

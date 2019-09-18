@@ -1,4 +1,4 @@
-spendInput = document.getElementById("spendInput");
+spendInput = document.getElementById("spendInput").disabled = true;
 class Budget { 
     constructor () { //IT TAKES IN THE WEEK'S STARTING BUDGET balance
         this.amountSpent = 0; // Initialized to 0, because you haven't spent anytihng yet.
