@@ -1,4 +1,4 @@
-spendInput = document.getElementById("spendInput").disabled = true;
+spendInput = document.getElementById("spendInput")
 class Budget { 
     constructor () { //IT TAKES IN THE WEEK'S STARTING BUDGET balance
         this.amountSpent = 0; // Initialized to 0, because you haven't spent anytihng yet.
@@ -16,9 +16,19 @@ class Budget {
         this.foodCheckbox = document.getElementById("foodCheckbox");
         this.clothingCheckbox = document.getElementById("clothingCheckbox");
         this.billsCheckbox = document.getElementById("billsCheckbox");
+        this.submit = document.getElementById("submit");
+
+        //initially disabling the button for spending
+        this.submitButton = document.getElementById("submit"); //disables the button for adding expenses
+        //this.submitButton.classList.toggle("gray");
+        this.submitButton.disabled = true;
+
     } // end object constructor
 
     spend(){ 
+        
+
+       
         // get transaction history
         let transactionHistory = document.getElementById("transactionHistory");//get the transaction history output
         //transactionHistory.innerHTML = "";//reset
@@ -105,6 +115,8 @@ class Budget {
 
 
     saveBudget(){
+        // saveBudgetButton = document.getElementsByClassName(".saveBudget").disabled = true;
+        
         //when the saveBudget button is pressed, the budget entry area needs to disapear
         let budgetEntry = document.getElementById("budgetEntry");
         budgetEntry.classList.toggle("invisible");

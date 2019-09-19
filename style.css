@@ -44,12 +44,16 @@ p {
     margin: 0;
 }
 
-#submit{
-    background-color: #e76c37;
+#submit, #saveBudget{
+    /* background-color: #e76c37; */
     border: none;
     padding: 10px;
     margin: 10px;
     border-radius: 10px;
+}
+
+#saveBudget {
+    background-color: #e76c37;
 }
 
 #budgetInput {
@@ -138,6 +142,11 @@ b {
     display: inline;
     text-align: left;
 }
+
+.gray {
+    background: gray;
+}
+
 
 /* media query */
 @media (min-width: 768px) {
