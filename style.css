@@ -177,12 +177,15 @@ table {
   #whatIsYourBudget {
       font-size: 30px;
   }
-
   
 #spendInput {
     border-radius: 15px;
     text-align: center;
     width: 200px;
+}
+
+.orange{
+    background-color: #e76c37;
 }
 
 /* media query */

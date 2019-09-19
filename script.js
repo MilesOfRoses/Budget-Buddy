@@ -25,23 +25,9 @@ class Budget {
 
     enablingButton(){
         //if one of the checkboxes are checked, enable the Submit spend button
-        if (entCheckbox.checked === true) {
-            this.submitButton.disabled = false;
-        } 
-
-        if (foodCheckbox.checked === true) {
-            this.submitButton.disabled = false;
-        } 
-
-        if (clothingCheckbox.checked === true) {
-            this.submitButton.disabled = false;
-        } 
-
-        if (billsCheckbox.checked === true) {
-            this.submitButton.disabled = false;
-        } 
+        this.submitButton.disabled = false;
+        this.submitButton.classList.add("orange");
     }
-
     spend(){ 
         // get transaction history
         let transactionHistory = document.getElementById("transactionHistory");//get the transaction history output
