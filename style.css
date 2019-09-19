@@ -1,4 +1,204 @@
-#ent, #food, #clothing, #bills {
-    border: solid black;
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif&display=swap');
+
+.invisible{
+    visibility: hidden;
 }
 
+.visible{
+    visibility: visible;
+}
+
+#spendArea{
+    margin-top: -222px;
+    color: white;
+}
+
+#largeNumbers{
+    font-size: 30px;
+}
+
+body {
+    background: #a7cecd;
+}
+
+#wrapper {
+    background-color: #0f3a53;
+    font-family: helvetica;
+    text-align: center;
+    width: 350px;
+    /* height: 560px; */
+    margin: 0 auto;
+    display: block;
+    border-radius: 10px;
+    padding-bottom: 20px;
+    z-index: 10px;
+}
+
+h1 {
+    padding-top: 50px;
+    margin-bottom: 50px;
+    color: #5c9292;
+    font-size: 40px;
+}
+
+p {
+    color: white;
+    font-size: 15px;
+    margin: 0;
+}
+
+#submit, #saveBudget{
+    
+    border: none;
+    padding: 5px;
+    margin: 5px;
+    width: 200px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    align-content: center;
+}
+
+#saveBudget {
+    background-color: #e76c37;
+}
+
+#budgetInput {
+    margin-bottom: 20px;
+    border-radius: 15px;
+    width: 200px;
+    text-align: center;
+}
+
+#transactionHistoryArea {
+    text-align: left;
+    background: #f2f2f2;
+    margin: 0 auto;
+    display: block;
+    padding: 10px;
+    width: 90%;
+    border-radius: 10px;
+
+}
+
+#transactionHistoryArea p {
+    color: black;
+    /* margin-top: -25px; */
+}
+
+#largeNumbers {
+    color: #e89247;
+}
+
+#entOutput {
+    text-align: left;
+    /* background: blue;
+    width: 80%;   */
+    margin: 10px;
+    border-radius: 10px;
+    /* padding-bottom: 20px; */
+}
+
+#foodOutput {
+    text-align: left;
+    /* background: purple;
+    width: 90%;   */
+    margin: 10px;
+    border-radius: 10px;
+}
+
+#clothingOutput {
+    text-align: left;
+    /* background: darkred; */
+    /* width: 90%;  */
+    margin: 10px;
+    border-radius: 10px;
+    /* padding-left: 20px; */
+}
+
+#billsOutput {
+    text-align: left;
+    /* background: orangered; */
+    /* width: 90%;  */
+    margin: 10px;
+    border-radius: 10px;
+} */
+
+b {
+    color: white;
+}
+
+/* .progress { */
+    /*width: 30%; /* THIS IS WHAT CONTROLS THE PROGRESS BARS */
+    /* height: 10px;
+    background: #5c9292;
+    padding: 5px;
+    border-radius: 10px; */
+/* } */
+
+/* #entProgress{
+    width: 60%;
+} */
+
+#budgetEntry p{
+    color: white;
+}
+
+#spendArea h4 {
+    color: white;
+}
+
+#budgetOutput p, #balanceOutput p, #totalSpent p {
+    display: inline;
+    text-align: left;
+}
+
+.gray {
+    background: gray;
+}
+
+table {
+    margin-top: 15px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  
+  .flex-container > div { 
+    width: 100px;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .money {
+      font-size: 20px;
+      
+  }
+
+  #whatIsYourBudget {
+      font-size: 30px;
+  }
+  
+#spendInput {
+    border-radius: 15px;
+    text-align: center;
+    width: 200px;
+}
+
+.orange{
+    background-color: #e76c37;
+}
+
+/* media query */
+@media (min-width: 768px) {
+    #wrapper {
+      width: 768px;
+    }
+  }
+  @media (min-width: 1024px) {
+    #wrapper {
+      width: 100%;
+    }
+  }
