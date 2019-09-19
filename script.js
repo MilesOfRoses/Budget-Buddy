@@ -17,18 +17,27 @@ class Budget {
         this.clothingCheckbox = document.getElementById("clothingCheckbox");
         this.billsCheckbox = document.getElementById("billsCheckbox");
         this.submit = document.getElementById("submit");
-
-        
         this.submitButton = document.getElementById("submit"); //disables the button for adding expenses
         //this.submitButton.classList.toggle("gray");
-        this.submitButton.disabled = false; //initially disabling the button for spending
-
+        this.submitButton.disabled = true; //initially disabling the button for spending
 
     } // end object constructor
 
     enablingButton(){
         //if one of the checkboxes are checked, enable the Submit spend button
         if (entCheckbox.checked === true) {
+            this.submitButton.disabled = false;
+        } 
+
+        if (foodCheckbox.checked === true) {
+            this.submitButton.disabled = false;
+        } 
+
+        if (clothingCheckbox.checked === true) {
+            this.submitButton.disabled = false;
+        } 
+
+        if (billsCheckbox.checked === true) {
             this.submitButton.disabled = false;
         } 
     }
@@ -39,7 +48,6 @@ class Budget {
         //transactionHistory.innerHTML = "";//reset
         //get ent output area
         let entOutput = document.getElementById("entOutput");
-
 
         this.balance.value -= this.spendInput.value; // decrease this.balance by (the amount spent)
         if (myBudget.balance.value < 0) { //if you DON'T have money available in your balance
