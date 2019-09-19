@@ -19,11 +19,12 @@
 
 body {
     background: #a7cecd;
+    font-family: 'Lato', sans-serif;
 }
 
 #wrapper {
     background-color: #0f3a53;
-    font-family: helvetica;
+    font-family: 'Lato', sans-serif;
     text-align: center;
     width: 350px;
     /* height: 560px; */
@@ -40,12 +41,20 @@ h1 {
     color: #5c9292;
     font-size: 40px;
 }
+h4 {
+   color: #e76c37;
+   font-size: 25px;
+}
 
 p {
-    color: white;
-    font-size: 15px;
+    color: #e76c37;
+    font-size: 20px;
     margin: 0;
 }
+p.money {
+    color: white;
+    font-size: 25px;
+ }
 
 #submit, #saveBudget{
     
@@ -56,10 +65,14 @@ p {
     border-radius: 10px;
     margin-bottom: 20px;
     align-content: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
 }
 
 #saveBudget {
     background-color: #e76c37;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
 }
 
 #budgetInput {
@@ -83,6 +96,7 @@ p {
 #transactionHistoryArea p {
     color: black;
     /* margin-top: -25px; */
+    font-size: 16px;
 }
 
 #largeNumbers {
@@ -96,6 +110,7 @@ p {
     margin: 10px;
     border-radius: 10px;
     /* padding-bottom: 20px; */
+    font-size: 20px;
 }
 
 #foodOutput {
@@ -125,6 +140,7 @@ p {
 
 b {
     color: white;
+    font-size: 20px;
 }
 
 /* .progress { */
@@ -144,7 +160,7 @@ b {
 }
 
 #spendArea h4 {
-    color: white;
+    color: #5c9292;
 }
 
 #budgetOutput p, #balanceOutput p, #totalSpent p {
@@ -191,14 +207,28 @@ table {
     background-color: #e76c37;
 }
 
+.label {
+    font-size: 12px;
+    margin-left: -6px;
+    margin-right: 10px;
+}
 /* media query */
 @media (min-width: 768px) {
     #wrapper {
       width: 768px;
     }
+    .label {
+        font-size: 20px;
+    }
   }
   @media (min-width: 1024px) {
     #wrapper {
-      width: 100%;
+      width: 950px;
+    }
+    .label {
+        font-size: 20px;
+    }
+    #transactionHistoryArea {
+        width: 690px;
     }
   }
