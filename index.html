@@ -8,23 +8,73 @@
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
 </head>
 <body>
-    <!-- Enter your weekly budget here
-    <input type="number" name="budgetInput" id="budgetInput" value="100">
-    <br>
-    How much did you spend?
-    <input type="number" name="spentInput" id="spentInput" value="20">
-    <br> -->
+    <div id="wrapper">
+        <div class="h1"><h1>SHOPAHOLIC THERAPY</h1></div>
+        <div id="budgetEntry">
+            <p>What is your budget?</p>
+            <br>
+            <input type="number" name="budgetInput" id="budgetInput" type="number">
+            <br>
+            <button onclick="myBudget.saveBudget()" id="saveBudget">Save Budget</button> 
+        </div>
 
-    What is your budget?<input type="number" name="budgetInput" id="budgetInput" value="0"> 
-    How much you want to spend?<input type="number" name="spendInput" id="spendInput" value="0">  
-    
-    <p>What catagory was this expense?</p>
-    <input type="radio" name="type" value="entCheckbox" id="entCheckbox"> Entertainment  
-    <input type="radio" name="type" value="foodCheckbox" id="foodCheckbox"> food
-    <input type="radio" name="type" value="clothingCheckbox" id="clothingCheckbox"> clothing
-    <input type="radio" name="type" value="billsCheckbox" id="billsCheckbox"> bills
-    <br> 
-    <button onclick="myBudget.spend()" id="submit">spend</button>    
+        <br>
+        <br>
+        <div id="spendArea" class="invisible">
+                <div class="flex-container">
+                  <div><p class="money">Budget</p><br><p id="budgetOutput"></p></div>
+                  <div><p class="money">Spent</p><br><p id="balanceOutput"></p></div> 
+                  <div><p class="money">Remaining</p></Remaining><br><p id="totalSpentOutput"></p></div>
+                </div>
+              
+              <br>
+            <h4>Select Category</h4> <!--Allow the user to choose between four categories for each purchase-->
+            <input type="radio" name="type" value="entCheckbox" id="entCheckbox"> Entertainment  
+            <input type="radio" name="type" value="foodCheckbox" id="foodCheckbox"> Food
+            <input type="radio" name="type" value="clothingCheckbox" id="clothingCheckbox"> Clothing
+            <input type="radio" name="type" value="billsCheckbox" id="billsCheckbox"> Bills
+            <br> 
+            <!-- How much you want to spend? -->
+            <br><br>
+            <input type="number" name="spendInput" id="spendInput" type="number">
+            <br><br>
+            <button onclick="myBudget.spend()" id="submit">Submit</button> 
+                    <!-- category outputs -->
+            
+        </div> 
+        
+        <div id="transactionHistoryArea" class="invisible">
+            <div class="outputArea">
+                    <b>Transaction History:</b><br>
+                <p id="entOutput">Total Spent on Entertainment: <b>$0</b></p>
+                <div class="progress" id="entProgress"></div>
+            </div>
+
+            <div class="outputArea">
+                <p id="foodOutput" width="10px">Food: <b>$0</b></p>
+                <!-- <div class="progress"></div> -->
+            </div>
+
+            <div class="outputArea">
+                <p id="clothingOutput">Total Spent on Clothing: <b>$0</b></p>
+                <!-- <div class="progress"></div> -->
+            </div>
+
+            <div class="outputArea">
+                <p id="billsOutput">Total Spent on Bills: <b>$0</b></p>
+                <!-- <div class="progress"></div> -->
+            </div>    
+   
+
+            <p id="transactionHistory"></p>
+            
+        </div>
+       
+ 
+                
+            
+
+    </div> <!-- / wrapper -->
 
     <script src="script.js"></script>
 </body>

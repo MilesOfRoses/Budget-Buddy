@@ -1,4 +1,206 @@
-#ent, #food, #clothing, #bills {
-    border: solid black;
+.invisible{
+    visibility: hidden;
 }
 
+.visible{
+    visibility: visible;
+}
+
+#spendArea{
+    margin-top: -222px;
+    color: white;
+}
+
+#largeNumbers{
+    font-size: 30px;
+}
+
+body {
+    background: #a7cecd;
+}
+
+#wrapper {
+    background-color: #0f3a53;
+    font-family: helvetica;
+    text-align: center;
+    width: 900px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 10px;
+    padding-bottom: 20px;
+}
+
+h1 {
+    padding-top: 50px;
+    margin-bottom: 50px;
+    color: #5c9292;
+    font-size: 40px;
+    justify-content: center;
+}
+
+p {
+    color: white;
+    font-size: 15px;
+    margin: 0;
+}
+
+#submit, #saveBudget {
+    border: none;
+    padding: 5px;
+    margin: 5px;
+    width: 200px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    align-content: center;
+}
+
+#budgetInput {
+    margin-bottom: 20px;
+    border-radius: 15px;
+    width: 200px;
+}
+
+#spendInput {
+    border-radius: 15px;
+    text-align: center;
+    width: 200px;
+}
+
+#saveBudget {
+    background-color: #e76c37;
+}
+
+#transactionHistoryArea {
+    text-align: left;
+    background: #f2f2f2;
+    margin: 0 auto;
+    display: block;
+    padding: 9%;
+    width: 480px;
+    border-radius: 10px;
+
+}
+
+#transactionHistoryArea p {
+    color: black;
+}
+
+#largeNumbers {
+    color: #e89247;
+}
+
+.h1 {
+    justify-content: center;
+}
+#entOutput {
+    text-align: left;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+#foodOutput {
+    margin: 10px;
+    border-radius: 10px;
+}
+
+#clothingOutput {
+    text-align: left;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+#billsOutput {
+    text-align: left;
+    margin: 10px;
+    border-radius: 10px;
+} */
+
+b {
+    color: white;
+}
+
+#budgetEntry p{
+    color: white;
+}
+
+#spendArea h4 {
+    color: white;
+}
+
+
+#budgetOutput p, #balanceOutput p, #totalSpentOutput p {
+    display: inline;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+table {
+    margin-top: 15px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  
+  .flex-container > div { 
+    width: 100px;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .money {
+      font-size: 20px;
+      
+  }
+
+
+@media  screen and (min-width: 1024px) {
+    #transactionHistoryArea {
+        width: 70%;
+  }
+}
+
+
+
+@media screen and (max-width: 960px) {
+
+#wrapper {
+    width: 700px;
+    }
+
+    #transactionHistoryArea {
+        width: 70%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+    #wrapper {
+      width: 500px;
+    }
+  }
+
+@media screen and (max-width: 660px) {
+    #wrapper {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+
+    h1 {
+        font-size: 25px;
+        padding: 20px;
+    }
+    #wrapper {
+        width: 300px;
+    }
+    #spendArea {
+        font-size:10px;
+    }
+    .money {
+        font-size:15px;
+    }
+
+  }
