@@ -45,11 +45,13 @@ p {
 }
 
 #submit, #saveBudget{
-    /* background-color: #e76c37; */
     border: none;
-    padding: 10px;
-    margin: 10px;
+    padding: 5px;
+    margin: 5px;
+    width: 200px;
     border-radius: 10px;
+    margin-bottom: 20px;
+    align-content: center;
 }
 
 #saveBudget {
@@ -58,11 +60,14 @@ p {
 
 #budgetInput {
     margin-bottom: 20px;
+    border-radius: 15px;
+    width: 200px;
+    text-align: center;
 }
 
 #transactionHistoryArea {
     text-align: left;
-    background: #cccccc;
+    background: #f2f2f2;
     margin: 0 auto;
     display: block;
     padding: 10px;
@@ -147,6 +152,37 @@ b {
     background: gray;
 }
 
+table {
+    margin-top: 15px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  
+  .flex-container > div { 
+    width: 100px;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .money {
+      font-size: 20px;
+      
+  }
+
+  #whatIsYourBudget {
+      font-size: 30px;
+  }
+
+  
+#spendInput {
+    border-radius: 15px;
+    text-align: center;
+    width: 200px;
+}
 
 /* media query */
 @media (min-width: 768px) {

@@ -18,17 +18,22 @@ class Budget {
         this.billsCheckbox = document.getElementById("billsCheckbox");
         this.submit = document.getElementById("submit");
 
-        //initially disabling the button for spending
+        
         this.submitButton = document.getElementById("submit"); //disables the button for adding expenses
         //this.submitButton.classList.toggle("gray");
-        this.submitButton.disabled = true;
+        this.submitButton.disabled = false; //initially disabling the button for spending
+
 
     } // end object constructor
 
-    spend(){ 
-        
+    enablingButton(){
+        //if one of the checkboxes are checked, enable the Submit spend button
+        if (entCheckbox.checked === true) {
+            this.submitButton.disabled = false;
+        } 
+    }
 
-       
+    spend(){ 
         // get transaction history
         let transactionHistory = document.getElementById("transactionHistory");//get the transaction history output
         //transactionHistory.innerHTML = "";//reset
@@ -44,10 +49,10 @@ class Budget {
         //    transactionHistory.innerHTML += (`<br> AVAILABLE MONEY: <b>$${this.balance.value}</b>`); //Displaying the user’s weekly budget which will be updated every time a new item is added to the list of purchased items
            console.log(this.balance.value);//track the remaining balance
            //this.budgetOutput.innerHTML += `Your Original Budget was: <span id="largeNumbers">$${this.balance.value}</span><br>`;
-           this.balanceOutput.innerHTML += `Remaining Available Balance:  <span id="largeNumbers">$${Math.round(balanceOutput * 100) / 100}</span>`;
+           this.balanceOutput.innerHTML += `Balance:  <span id="largeNumbers">$${Math.round(balanceOutput * 100) / 100}</span>`;
            //The code that makes the balance show up next to the beginning budget
            this.balanceOutput = document.getElementById("balanceOutput"); //get the h2 that will store the balance Output
-           this.balanceOutput.innerHTML = `Remaining Available Balance: <span id="largeNumbers">$${Math.round(myBudget.balance.value * 100) / 100}</span>`; //output the beginning budget
+           this.balanceOutput.innerHTML = `<span id="largeNumbers">$${Math.round(myBudget.balance.value * 100) / 100}</span>`; //output the beginning budget
            
         } else {
             this.amountSpent += parseFloat(spendInput.value); //and increase this.amountSpent by (the amount spent)
@@ -67,7 +72,7 @@ class Budget {
 
                 //The code that makes the balance show up next to the beginning budget
                 this.balanceOutput = document.getElementById("balanceOutput"); //get the h2 that will store the balance Output
-                this.balanceOutput.innerHTML = `Remaining Available Balance: <span id="largeNumbers">$${Math.round(myBudget.balance.value * 100) / 100 }</span>`; //output the beginning budget
+                this.balanceOutput.innerHTML = `<span id="largeNumbers">$${Math.round(myBudget.balance.value * 100) / 100 }</span>`; //output the beginning budget
              
             } 
             
@@ -80,7 +85,7 @@ class Budget {
                 foodOutput.innerHTML = (`Total Spent on Food: <b>$${myBudget.foodSpent}</b>`); //The user should be able to see how much money is being spent on each of the four categories.
                 //The code that makes the balance show up next to the beginning budget
                 this.balanceOutput = document.getElementById("balanceOutput"); //get the h2 that will store the balance Output
-                this.balanceOutput.innerHTML = `Remaining Available Balance: <span id="largeNumbers">$${Math.round(myBudget.balance.value * 100) / 100}</span>`; //output the beginning budget
+                this.balanceOutput.innerHTML = `<span id="largeNumbers">$${Math.round(myBudget.balance.value * 100) / 100}</span>`; //output the beginning budget
             }
     
             if ( clothingCheckbox.checked === true ) { //if it was clothing
@@ -92,7 +97,7 @@ class Budget {
                 clothingOutput.innerHTML = (`Total Spent on Clothing:<b>$${myBudget.clothingSpent}</b>`); //The user should be able to see how much money is being spent on each of the four categories.
                 //The code that makes the balance show up next to the beginning budget
                 this.balanceOutput = document.getElementById("balanceOutput"); //get the h2 that will store the balance Output
-                this.balanceOutput.innerHTML = `Remaining Available Balance: <span id="largeNumbers">$${Math.round(myBudget.balance.value * 100) / 100}</span>`; //output the beginning budget
+                this.balanceOutput.innerHTML = `<span id="largeNumbers">$${Math.round(myBudget.balance.value * 100) / 100}</span>`; //output the beginning budget
             }
     
             if ( billsCheckbox.checked === true ) { //if it was bills
@@ -104,18 +109,16 @@ class Budget {
                 billsOutput.innerHTML = (`Total Spent on Bills: <b>$${myBudget.billsSpent}</b>`); //The user should be able to see how much money is being spent on each of the four categories.
                 //The code that makes the balance show up next to the beginning budget
                 this.balanceOutput = document.getElementById("balanceOutput"); //get the h2 that will store the balance Output
-                this.balanceOutput.innerHTML = `Remaining Available Balance:<span id="largeNumbers">$${Math.round(myBudget.balance.value * 100) / 100}</span>`; //output the beginning budget
+                this.balanceOutput.innerHTML = `<span id="largeNumbers">$${Math.round(myBudget.balance.value * 100) / 100}</span>`; //output the beginning budget
             }
         }
         spendInput.value = 0; //reset
         this.totalSpentOutput = document.getElementById("totalSpentOutput");
-        this.totalSpentOutput.innerHTML = `Total Spent: <span id="largeNumbers">$${myBudget.amountSpent}</span>`;
+        this.totalSpentOutput.innerHTML = `<span id="largeNumbers">$${myBudget.amountSpent}</span>`;
         
     }
 
-
     saveBudget(){
-        // saveBudgetButton = document.getElementsByClassName(".saveBudget").disabled = true;
         
         //when the saveBudget button is pressed, the budget entry area needs to disapear
         let budgetEntry = document.getElementById("budgetEntry");
@@ -129,7 +132,7 @@ class Budget {
         transactionHistoryArea.classList.toggle("visible");
 
         this.budgetOutput = document.getElementById("budgetOutput"); //get the h2 that will store the budget output
-        this.budgetOutput.innerHTML = `Your Original Budget was: <span id="largeNumbers">$${this.budgetInput.value}</span><br>`; //output the beginning budget      
+        this.budgetOutput.innerHTML = `<span id="largeNumbers">$${this.budgetInput.value}</span><br>`; //output the beginning budget      
     }
 } // end class Budget
 
