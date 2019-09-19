@@ -207,14 +207,28 @@ table {
     background-color: #e76c37;
 }
 
+.label {
+    font-size: 12px;
+    margin-left: -6px;
+    margin-right: 10px;
+}
 /* media query */
 @media (min-width: 768px) {
     #wrapper {
       width: 768px;
     }
+    .label {
+        font-size: 20px;
+    }
   }
   @media (min-width: 1024px) {
     #wrapper {
-      width: 100%;
+      width: 950px;
+    }
+    .label {
+        font-size: 20px;
+    }
+    #transactionHistoryArea {
+        width: 690px;
     }
   }
